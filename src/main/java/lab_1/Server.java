@@ -9,7 +9,7 @@ public class Server {
     static volatile int sum = 0;
 
     public static void main(String[] args) throws IOException {
-        System.out.println("Welcome to Server side");
+        System.out.println("Welcome to XmlServer side");
         BufferedReader in;
         PrintWriter out;
 
@@ -78,7 +78,8 @@ public class Server {
 
 // Создать несколько потоков исполнения
 class Worker implements Runnable {
-    int a, b;
+    private int a;
+    private int b;
 
     Worker(int a, int b) {
         this.a = a;
